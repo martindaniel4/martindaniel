@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Geo</title>
+	<script type="text/javascript" src="../source/d3/d3v2.js"></script>
+    <script type="text/javascript" src="../source/d3/d3.geo.js"></script>
+    <style type="text/css">
+
+body{
+  background: #000;
+}
+
+#container {
+  position:absolute; 
+  left: 45%;  
+  top: 50%; 
+  width: 960px; 
+  height: 500px; 
+  margin-top: -250px;
+  margin-left: -480px;
+  }
+
+svg {
+  width: 960px;
+  height: 500px;
+  background: #000;
+}
+
+#states path {
+  stroke: #fff;
+  fill: none;
+}
+
+#states circle {
+  stroke: #fff;
+  fill: #fff;
+  opacity: 0.6;
+
+}
+
+
+#texte{
+	font: 25px Georgia, 'Times New Roman', Times;
+	color: #fff;
+	position: absolute;
+	left: 75%;
+	top: 25%;
+	width: 300px;
+	height: 50px;
+	margin-top: -25px;
+	margin-left: -50px;
+	border: 1px solid #000;
+	}
+	
+    </style>
+	
+  </head>
+  <body>
+   <div id = "container"> 
+    <script type="text/javascript">
+
+// Our projection.
+var xy = d3.geo.albers(),
+    path = d3.geo.path().projection(xy.origin([3, 46]).scale(2000));
+
+d3.select("#container")
+  .append("svg:svg")
+  .append("svg:g")
+    .attr("id", "states");
+	
+d3.json("data/points.json", function(collection) {
+  d3.select("#states")
+    .selectAll("circle")
+      .data(collection.features)
+    .enter().append("svg:circle")
+      .attr("transform", function(d) { return "translate(" + xy(d.geometry.coordinates) + ")"; })
+      .attr("r", 1)
+});
+
+d3.json("data/europe.json", function(collection) {
+  d3.select("#states")
+    .selectAll("path")
+      .data(collection.features)
+    .enter().append("svg:path")
+      .attr("d", path);
+
+});
+
+function refresh() {
+  d3.selectAll("#states circle");
+document.getElementById("heure").innerHTML = heure%24+" heures";
+}
+
+heure = -1;
+
+function next()
+{
+heure++};
+
+setInterval(function() {
+
+
+    d3.json("data/points.json", function(collection) {
+  d3.selectAll("circle")
+      .data(collection.features)
+		.transition()
+			.attr("r", function (d) {if (d.properties.heure == heure%24) { return d.properties.transaction*2;} else return 0;})
+			.duration(1000)
+
+			}
+  )
+  heure++;
+  refresh();
+  
+  
+ }, 1000);
+
+
+    </script>
+	
+	<div id="texte">
+	 <div> Le 1er Mars 2011 a </div>
+	 <div id="heure"></div>
+	 </div>
+	
+	</div>
+  </body>
+</html>

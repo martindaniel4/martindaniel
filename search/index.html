@@ -1,0 +1,87 @@
+<html>
+  <head>
+  
+    <title>Search Analytics </title>
+    <script type="text/javascript" src="../source/d3/d3v2.js"></script>
+	<script type="text/javascript" src="../source/jquery/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../source/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../source/d3/d3-compat.js"></script>
+	<script type="text/javascript" src="../source/bootstrap/js/bootstrap.d3.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<link type="text/css" rel="stylesheet" href="../source/bootstrap/css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+
+  	
+  	<div class="head">
+      <div class="subtitle">
+        Data Visual
+      </div>
+      <a href="../">Labs</a>
+    </div>
+  	
+  	
+  	<div id ="body_main" class="body">
+  		
+	<div class="row">
+		
+	<div class="col-lg-6">
+  	  <div class="main_titre">Search Analytics</div>
+  	</div>
+	
+	<div class="col-lg-1">
+	
+	</div>
+	
+	<div class="col-lg-5" style="margin-top:10px">
+		<form class="form-inline">
+			<input type="text" id="seuilForm" class="form-control" placeholder="Enter a threshold" style="width:300px;"></input>
+			<label id="seuilLabel" style="vertical-align:middle; margin-left:10px;"><h2>0.8</h2></label>
+		</form>
+	</div>
+	
+	</div>
+	
+  	<div id="main_container" >
+
+	
+	</div>
+	
+	<div style="margin-bottom:10px; margin-top:10px; color:#D0000C;"> What is it ? </div>
+	  
+	  <div style="padding-left:0px;width:auto;">
+     
+	 Is "crocus" a restaurant or a flower ? 
+   
+   <p></p>
+   
+   Here is a sample of 3000 queries that went through Search Analytics, a classifier that disambiguates queries on pagesjaunes.fr.
+   
+	 <p> </p>
+	 
+   For each query, Search Analytics computes an index within 0 and 1. 0 means the query is well interpreted. 1 means there is an interpretation error on the website. 
+   
+   <p> </p>
+   
+   Learn more here (FR) <a href="http://www.journaldunet.com/solutions/dsi/projet-de-big-data-en-france/pagesjaunes-gerer-les-recherches-mal-categorisees.shtml">here </a>
+	 
+      
+      </div>
+	  
+      <br clear="all">
+
+
+      </div>
+	
+	
+	</div>
+	
+	<div class="foot">
+      Copyright 2014 <a href="http://www.twitter.com/martindaniel4">Martin DANIEL</a>
+    </div>
+	
+    <script type="text/javascript" src="js/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,555 @@
+
+
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+a {
+  color: #D0000C;
+  text-decoration: none;
+}
+
+a:active {
+  color: #FF7400;
+}
+
+a:hover {
+  color: #FF7400;
+  text-decoration: underline;
+}
+
+body, td {
+  font: 16px/134% Helvetica Neue, sans-serif;
+  color: grey;
+}
+
+.title, .head, .subhead, .body, .foot {
+  padding: 10px;
+  width: 1000px;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.title {
+  background: #eee;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title a {
+  color: #000;
+}
+
+sub, sup {
+  line-height: 0;
+}
+
+.subtitle {
+  float: right;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: normal;
+  color: #666;
+}
+
+.head, .subhead {
+  background: #fff;
+  height: 1.34em;
+  border-bottom: solid 1px #aaa;
+  border-right: solid 1px #aaa;
+  margin-bottom: 10px;
+}
+
+.subhead {
+  color: #4a5584;
+  margin-bottom: 0px;
+  border-bottom: solid 1px #eee;
+  font-weight: normal;
+}
+
+.section {
+  float: left;
+  margin-right: 20px;
+}
+
+.selected a {
+  color: #000;
+}
+
+.body {
+  background: #fff;
+  border-right: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  padding-bottom: 40px;
+}
+
+.foot {
+  color: #666;
+  font-size: 11px;
+  text-align: right;
+}
+
+.body table {
+  width: 100%;
+}
+
+.body tt, .body pre {
+  font-family: Courier;
+  line-height: 120%;
+}
+
+.highlight {
+  overflow: hidden;
+  padding-left: 20px;
+  border-left: solid 4px #ccc;
+}
+
+.highlight pre {
+  font-size: 12px;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+}
+
+.item {
+  float: left;
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  color: grey;
+  margin-top: 20px;
+
+}
+
+.item_text {
+font: 14px/134% sans-serif;
+ margin-top: 20px;
+}
+
+
+.item:hover {
+  color: #D0000C;
+  text-decoration:none;
+}
+
+.item img {
+  border: solid 1px lightgrey;
+  margin-bottom: 20px;
+}
+
+.item:hover img {
+  border: solid 1px #D0000C;
+}
+
+.button a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #ffb;
+  border-bottom: solid 1px #dda;
+  border-right: solid 1px #dda;
+  padding: 10px;
+}
+
+.button div {
+  float: right;
+  font-weight: normal;
+  color: #996;
+}
+
+.button a:hover {
+  color: #4a5584;
+  background-color: #ff6;
+}
+
+.new {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: smaller;
+  line-height: 0;
+  left: 6px;
+  bottom: 2px;
+  position: relative;
+  color: brown;
+}
+
+@media print {
+  .head, .subhead {
+    display: none;
+  }
+
+  .title div {
+    font-size: 16px;
+    display: inline;
+    margin-right: 1em;
+  }
+
+  body, td {
+    font: 8px Helvetica Neue, sans-serif;
+  }
+
+  .body pre {
+    font-size: 8px;
+  }
+
+  .body, .title {
+    margin: .5in;
+    margin-top: 0in;
+    margin-bottom: .25in;
+    padding: 0;
+    padding-left: 0 !important;
+  }
+
+  .foot {
+    border-bottom: none;
+  }
+}
+
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_12 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 {
+	width:70px;
+}
+
+.container_12 .grid_2 {
+	width:150px;
+}
+
+.container_12 .grid_3 {
+	width:230px;
+}
+
+.container_12 .grid_4 {
+	width:310px;
+}
+
+.container_12 .grid_5 {
+	width:390px;
+}
+
+.container_12 .grid_6 {
+	width:470px;
+	font: 12px/134% Helvetica Neue, sans-serif;
+	color: grey;
+}
+
+.container_12 .grid_7 {
+	width:550px;
+}
+
+.container_12 .grid_8 {
+	width:630px;
+}
+
+.container_12 .grid_9 {
+	width:710px;
+}
+
+.container_12 .grid_10 {
+	width:790px;
+}
+
+.container_12 .grid_11 {
+	width:870px;
+}
+
+.container_12 .grid_12 {
+	width:950px;
+}
+
+
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 {
+	padding-left:80px;
+}
+
+.container_12 .prefix_2 {
+	padding-left:160px;
+}
+
+.container_12 .prefix_3 {
+	padding-left:240px;
+}
+
+.container_12 .prefix_4 {
+	padding-left:320px;
+}
+
+.container_12 .prefix_5 {
+	padding-left:400px;
+}
+
+.container_12 .prefix_6 {
+	padding-left:480px;
+}
+
+.container_12 .prefix_7 {
+	padding-left:560px;
+}
+
+.container_12 .prefix_8 {
+	padding-left:640px;
+}
+
+.container_12 .prefix_9 {
+	padding-left:720px;
+}
+
+.container_12 .prefix_10 {
+	padding-left:800px;
+}
+
+.container_12 .prefix_11 {
+	padding-left:880px;
+}
+
+
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1 {
+	padding-right:80px;
+}
+
+.container_12 .suffix_2 {
+	padding-right:160px;
+}
+
+.container_12 .suffix_3 {
+	padding-right:240px;
+}
+
+.container_12 .suffix_4 {
+	padding-right:320px;
+}
+
+.container_12 .suffix_5 {
+	padding-right:400px;
+}
+
+.container_12 .suffix_6 {
+	padding-right:480px;
+}
+
+.container_12 .suffix_7 {
+	padding-right:560px;
+}
+
+.container_12 .suffix_8 {
+	padding-right:640px;
+}
+
+.container_12 .suffix_9 {
+	padding-right:720px;
+}
+
+.container_12 .suffix_10 {
+	padding-right:800px;
+}
+
+.container_12 .suffix_11 {
+	padding-right:880px;
+}
+
+
+
+/* Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .push_1 {
+	left:80px;
+}
+
+.container_12 .push_2 {
+	left:160px;
+}
+
+.container_12 .push_3 {
+	left:240px;
+}
+
+.container_12 .push_4 {
+	left:320px;
+}
+
+.container_12 .push_5 {
+	left:400px;
+}
+
+.container_12 .push_6 {
+	left:480px;
+}
+
+.container_12 .push_7 {
+	left:560px;
+}
+
+.container_12 .push_8 {
+	left:640px;
+}
+
+.container_12 .push_9 {
+	left:720px;
+}
+
+.container_12 .push_10 {
+	left:800px;
+}
+
+.container_12 .push_11 {
+	left:880px;
+}
+
+
+
+/* Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .pull_1 {
+	left:-80px;
+}
+
+.container_12 .pull_2 {
+	left:-160px;
+}
+
+.container_12 .pull_3 {
+	left:-240px;
+}
+
+.container_12 .pull_4 {
+	left:-320px;
+}
+
+.container_12 .pull_5 {
+	left:-400px;
+}
+
+.container_12 .pull_6 {
+	left:-480px;
+}
+
+.container_12 .pull_7 {
+	left:-560px;
+}
+
+.container_12 .pull_8 {
+	left:-640px;
+}
+
+.container_12 .pull_9 {
+	left:-720px;
+}
+
+.container_12 .pull_10 {
+	left:-800px;
+}
+
+.container_12 .pull_11 {
+	left:-880px;
+}
+
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
