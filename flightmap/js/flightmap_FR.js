@@ -117,7 +117,7 @@ var countrys = vis.append("svg:svg")
 				.attr("y", 280);
 
 var legend = [{color:"rgb(5, 113, 176)",text:"1st Quartile  x < "+quart1},{color:"rgb(146, 197, 222)",text:"2nd Quartile"+" "+quart1+" "+"< x <"+" "+quart2},{color:"rgb(244, 165, 130)",text:"3rd Quartile"+" "+quart2+" "+"< x <"+" "+quart3},{color:"rgb(202, 0, 32)",text:"4th Quartile  x >"+" "+quart3}];
-var titre = ["AF FR | Hesitation before purchase"];
+var titre = ["Hesitation before purchase"];
 var pays = ["World", "Europe", "France"];
 
 legende.selectAll("rect")
