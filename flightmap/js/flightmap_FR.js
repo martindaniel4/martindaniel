@@ -34,6 +34,7 @@ var xy = d3.geo.mercator(),
   .append("svg:svg")
   .attr("fill", "none")
   .attr("height", height)
+  .attr("width",1500)
   .attr("stroke", "none")
   .on("dblclick", function() {d3.select("#connect").selectAll("path").attr("visibility", "visible");
 							d3.select("#panel").selectAll("text").remove()});
