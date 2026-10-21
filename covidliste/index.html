@@ -1,0 +1,278 @@
+<html>
+
+<head>
+  <title>The crazy story of Covidliste</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <style>
+    .chapter {
+      margin-top: 40px;
+      color: #D0000C;
+      padding-bottom: 20px;
+    }
+
+    .figure {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .figure img {
+      max-width: 100%;
+    }
+
+    .caption {
+      color: grey;
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    .quote {
+      border-left: 3px solid #D0000C;
+      padding-left: 15px;
+      margin: 20px 0;
+      color: #444;
+    }
+
+    p {
+      margin: 0 0 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="head">
+    <a href="../">Home</a>
+  </div>
+
+  <div class="body">
+    <h1>The crazy story of Covidliste</h1>
+
+    <div style="color:grey;">
+      On March 30, 2021, before going to bed, I launched Covidliste from my living room with two friends.
+      Ten weeks later, nearly a million vaccine volunteers had been notified of an available dose, and a team of
+      300 volunteers had come together. This is the story, adapted from the
+      brochure we wrote in July 2021.
+    </div>
+
+    <div class="chapter">Data</div>
+
+    <p>
+      Before Covidliste, I spent five years in the Data Science team at Airbnb. In 2015 I also started
+      <a href="http://www.dataforgood.fr/">Data For Good</a>, asking how technology could serve the public
+      interest.
+    </p>
+    <p>
+      My former manager Peter used to describe online marketplaces as "candy stores for economists". Because
+      everything is measurable, data acts like a flashlight on imbalances between supply and demand. Those
+      imbalances often show up first as anecdotes. At Airbnb it was "this destination is fully booked" or
+      "prices are high for this kind of home". For vaccines, it was two friends, Aimé and Guelfo, who tipped me
+      off on March 23: a vaccination center in Paris had reportedly thrown away doses while volunteers could not
+      find a vaccine.
+    </p>
+
+    <div class="figure">
+      <img src="img/first_message.jpg" width="534">
+      <div class="caption">Exchange with Guelfo on March 23</div>
+    </div>
+
+    <p>
+      I talked about it with my friend Antoine Roux, a pulmonologist at hospital Foch, on March 24. We had
+      already worked together on the <a href="https://github.com/dataforgoodfr/batch_5_transplant">Transplant</a>
+      project. I also told my friends Mathieu and Guillaume. Mathieu was in. Game on.
+    </p>
+
+    <div class="chapter">The spark on Twitter</div>
+
+    <p>
+      On Sunday, March 28, I had a bit of time and coded a first version. On the evening of the 30th I posted
+      this message on Twitter. Word of mouth did the rest: 100 sign-ups the next day, 50k a few days later, 500k
+      in 10 days.
+    </p>
+
+    <div class="figure">
+      <img src="img/launch_tweet.jpg" width="450">
+      <div class="caption">The first tweet announcing Covidliste</div>
+    </div>
+
+    <div class="chapter">Citizens</div>
+
+    <p>
+      The excitement was palpable: journalists, questions from volunteers, Twitter trolls, all at once. Yet the
+      project was still fragile and could fall apart at any moment. I opened a Slack workspace and invited
+      anyone who wanted to help. Nearly a hundred people signed up on their own, among them Gaëlle, Coline,
+      Assen, Germain, Matthieu, Maxence and Florian, who would shape the rest of the project.
+    </p>
+
+    <div class="quote">
+      "It's the best professional experience of my life. The momentum is incredible and the speed of execution
+      is such that I'm not ready to step away as long as I'm useful."<br>
+      <span style="color:grey">Gaëlle Le Goff, who led the team onboarding vaccination centers</span>
+    </div>
+
+    <div class="quote">
+      "Changes to the site happen very fast. Often it only takes a few hours for a fix to be coded, tested and
+      deployed."<br>
+      <span style="color:grey">Matthieu Gariel, support team, who saw up to 700 emails a day in the early
+        weeks</span>
+    </div>
+
+    <p>
+      We needed reinforcements in key roles, people we could trust. Within days Sébastien (tech), Laëtitia
+      (data science), Bertrand (operations), Juliette (public affairs), Émilie (press), Marc (recruiting and
+      fundraising), Romain (automation, documentation), Clément (acquisition) and Antoine (legal) joined.
+    </p>
+    <p>
+      Our first priority was data security and privacy. Mathieu rewrote the app in Rails and, with Sébastien,
+      moved the database to the most secure servers of our partner Scalingo in France. Data was encrypted before
+      being stored and the code was <a href="https://github.com/hostolab/covidliste/">open source</a>. We
+      eventually stopped storing names and exact addresses altogether: even if someone stole the database, it
+      would be worthless. Thanks to Raphaël, the law firm McDermott Will &amp; Emery supported us pro bono, and
+      with Florian, our DPO, we set up the non-profit, legal notices and data deletion processes in record time.
+    </p>
+
+    <div class="chapter">The first person vaccinated</div>
+
+    <p>
+      We had lots of volunteers but no vaccination center using the platform. On April 2, I received a Twitter
+      DM from a nurse in a Paris center: she had hundreds of doses on her hands and no one to give them to. I ran
+      a quick query: thousands of eligible volunteers lived near her center.
+    </p>
+    <p>
+      Maxence and I put together a quick SMS prototype: a small script alerted volunteers and revealed the
+      center's address once they replied. We ran a test and it worked. Our first person vaccinated through
+      Covidliste was Mohan, 72, from Pantin. He gained a month on his original appointment.
+    </p>
+
+    <div class="figure">
+      <img src="img/sms.jpg" width="242" style="vertical-align:middle; margin-right:20px;">
+      <img src="img/mohan.jpg" width="239" style="vertical-align:middle;">
+      <div class="caption">The SMS prototype, and Mohan, the first person vaccinated through Covidliste</div>
+    </div>
+
+    <div class="chapter">The battle for vaccination centers</div>
+
+    <p>
+      Everything now depended on vaccination centers adopting the tool. No doses, no Covidliste. Bertrand, Gaëlle
+      and Clément built a team dedicated to centers: some on acquisition, others on validating and supporting
+      the centers that signed up. On social media, Assen and Juliette set up a simple routine to notify local
+      officials and regional health agencies each time a center joined. Émilie wrote our first press release and
+      we were picked up by most national and regional media.
+    </p>
+    <p>
+      Pharmacies and medical practices were the first to join. Covidliste was especially useful for them to use
+      up AstraZeneca doses and save time managing their waiting lists. On April 6, we ran our first campaign with
+      the Stade de France: 30 doses on Wednesday, then 400 Pfizer and Moderna doses gone in minutes the next day.
+      By the end of that second week we had helped vaccinate 1,000 people, up from 50 the week before.
+    </p>
+
+    <div class="figure">
+      <img src="img/centers_chart.jpg" width="546">
+      <div class="caption">Number of vaccination centers signed up on Covidliste</div>
+    </div>
+
+    <div class="figure">
+      <img src="img/admin.jpg" width="497">
+      <div class="caption">The admin interface volunteers used to review and validate vaccination centers</div>
+    </div>
+
+    <div class="chapter">A digital NGO</div>
+
+    <p>
+      To get organized, we set up teams, each with its own Slack channel and a lead. Romain wrote documentation
+      so every new volunteer could get up to speed on their own. With that in place, recruiting could scale: Marc
+      posted on LinkedIn, and with Myriam and Marie-Laure ran hundreds of interviews. In total, close to 300
+      volunteers joined, and most of us never met in person.
+    </p>
+    <p>
+      On the product side, Laurie, Lucile, Damien and Pauline tracked features in GitHub issues, and we held
+      product reviews with the design and tech teams to settle open decisions. Because the code was open source,
+      about 50 developers contributed pull requests, and we invited the most talented to Slack: Navid, Guillaume,
+      Adrien, Ardjo and others.
+    </p>
+    <p>
+      And since "without data, you're just another person with an opinion", Laëtitia and Antoine from the data
+      science team helped everyone prioritize: should we ship this feature? Where should we focus center
+      acquisition? What makes a campaign succeed or fail? The support team led by Matthieu went from 700 emails
+      a day to fewer than 50, thanks in part to Germain, who answered emails and then coded the fixes. To keep
+      everyone aligned, I recorded a short Loom video once or twice a week to share context and set the
+      direction.
+    </p>
+
+    <div class="figure">
+      <img src="img/contributors_1.jpg" width="411" style="vertical-align:top;">
+      <img src="img/contributors_2.jpg" width="413" style="vertical-align:top;">
+      <div class="caption">Some of the open source contributors to Covidliste</div>
+    </div>
+
+    <div class="chapter">Funding</div>
+
+    <p>
+      Then a new problem: we were spending too much money. Our first system sent one SMS per notification. An
+      SMS costs €0.05 and we were sending close to 150,000 a week. In barely three weeks our personal credit
+      cards had been charged about €15,000.
+    </p>
+    <p>
+      First, we cut costs. Mathieu designed a new notification algorithm by email, first come, first served.
+      Email is almost free, but would it work as well as SMS? We ran our first A/B test and the answer was yes:
+      costs dropped 10x while the fill rate held steady.
+    </p>
+    <p>
+      Second, we launched a crowdfunding campaign. The founder of Ulule advised us to launch fast and record a
+      video. When the agency that joined us asked about budget and timeline, the answers were "zero" and "we
+      launch the day after tomorrow". About 1,000 individuals, companies, the Fondation de France and the
+      Ministry of Health helped us beat our initial goal more than 3x.
+    </p>
+
+    <div class="figure">
+      <img src="img/video.jpg" width="498">
+      <div class="caption">Dr Antoine Roux in our crowdfunding video</div>
+    </div>
+
+    <div class="chapter">Citizens, companies and the State</div>
+
+    <p>
+      In the very first week, the Covid-19 Vaccination Taskforce at the French Health Ministry (DGS) reached out
+      and we stayed in regular contact. Once an audit by the French Digital Health Agency (ANS) validated the
+      quality and security of the platform, regional health agencies were told that Covidliste was an approved
+      solution to manage waiting lists.
+    </p>
+    <p>
+      We also integrated Pro Santé Connect (thanks Germain), which lets healthcare professionals verify their
+      identity with their e-CPS card. It sped up center validation considerably and is a good example of a
+      digital commons citizens can build on.
+    </p>
+
+    <div class="figure">
+      <img src="img/roadmap.jpg" width="555">
+      <div class="caption">Covidliste in the French digital health roadmap, by Laura Létourneau and Dominique
+        Pons</div>
+    </div>
+
+    <div class="chapter">What I take away</div>
+
+    <p>
+      What stays with me is the energy, and how quickly determined citizens can organize to solve a problem on
+      the ground. The recipe is simple: build tools that make the daily life of healthcare professionals better.
+      That is the goal of Hostolab, the non-profit we created to run Covidliste and, we hope, other simple,
+      useful and open projects in the future.
+    </p>
+
+    <div class="figure">
+      <img src="img/testimonials_1.jpg" width="513" style="vertical-align:top;">
+      <img src="img/testimonials_2.jpg" width="517" style="vertical-align:top;">
+      <div class="caption">Messages from volunteers and healthcare professionals</div>
+    </div>
+
+    <p>
+      Thank you all for your unwavering commitment! The code is still available on
+      <a href="https://github.com/hostolab/covidliste/">GitHub</a>.
+    </p>
+
+  </div>
+
+</body>
+
+</html>
